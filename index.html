@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f8fa;
+            color: #2e2e24;
+        }
+        header {
+            background-color: #fadc31;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Color strips below the header */
+        .color-strips {
+            display: flex;
+            height: 10px; /* 1/4 of the 20px header padding */
+        }
+        .color-strip-left {
+            flex: 1;
+            background-color: #e188fc; /* Blue strip */
+        }
+        .color-strip-right {
+            flex: 1;
+            background-color: #68b282; /* Green strip */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #6a1676;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #0056b3;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #24292e;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f6f8fa;
+            border-bottom: 1px solid #e1e4e8;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            color: #586069;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .team-member {
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid #e1e4e8;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #24292e;
+            color: white;
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .team-member {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PROJECT NAME HERE</h1>
+</header>
+
+<!-- Two color strips below the header -->
+<div class="color-strips">
+    <div class="color-strip-left"></div>
+    <div class="color-strip-right"></div>
+</div>
+
+<nav>
+    <a href="documentation.html">Project Documentation</a>
+    <a href="progress.html">Progress Reports</a>
+    <!-- <a href="#contact" target="_blank">Contact</a> -->
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>Home Automation Project For Open House</h1>
+        <p>SOFTWARE DEV PRACTICE I 010123131</p>
+        <p>KMUTNB Open House 4 - 5 October 2024</p>
+        <!-- <a href="#get-started" class="cta-button">Get Started</a> -->
+    </div>
+</section>
+
+<!-- <section class="container" id="overview">
+    <h2>Overview</h2>
+    <p>
+        เดี๋ยวมาคิด
+    </p>
+    <h3>Objectives:</h3>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</section> -->
+
+<section class="container" id="team">
+    <h2>Team Members</h2>
+    <div class="team">
+        <div class="team-member">
+            <!-- <img src="team1.jpg" alt="John Doe"> -->
+            <h3>Thanathan Chansuk</h3>
+            <p>(6601012620101)</p>
+        </div>
+        <div class="team-member">
+            <!-- <img src="team2.jpg" alt="Jane Smith"> -->
+            <h3>Phumvit Wongmool</h3>
+            <p>(6601012630068)</p>
+        </div>
+        <div class="team-member">
+            <!-- <img src="team3.jpg" alt="Mark Lee"> -->
+            <h3>Puwit Luedara</h3>
+            <p>(6601012610113)</p>
+        </div>
+    </div>
+</section>
+
+<!-- <footer>
+    &copy; 2024 Smart Home Automation System | All Rights Reserved
+</footer> -->
+
+</body>
+</html>
