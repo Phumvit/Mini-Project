@@ -112,19 +112,38 @@
         <h2>Hardware Components</h2>
         <ul>
             <li>Raspberry Pi 4B + Powersupply</li>
-
             <br>
             <img src="current_equipments/rpi4b.jpg" width="200">
             <img src="current_equipments/psupply.jpg" width="200">
 
+            <br><br>
+
             <li>ESP32 Boards</li>
+            <br>
+            <img src="current_equipments/IMG_4846.JPG" width="200">
+
+            <br><br>
+
             <li>Webcam</li>
+            <br>
+            <img src="current_equipments/IMG_4838.JPG" width="200">
+
+            <br><br>
+
             <li>Servo Motor + Bracket</li>
+            <br>
+            <img src="current_equipments/IMG_4837.JPG" width="200">
+
+            <br><br>
+
             <li>Zigbee Light Bulbs</li>
+            <br>
+            <img src="current_equipments/IMG_4831.JPG" width="200">
+            <img src="current_equipments/IMG_4835.JPG" width="200">
         </ul>
     </section>
 
-    <section></section>
+    <section>
         <h2>Software Components</h2>
         <ul>
             <li>Home Assistant OS</li>
@@ -136,26 +155,41 @@
         </ul>
     </section>
 
-    <!-- <section id="features">
-        <h2>Key Features</h2>
-        <ul>
-            <li>Placeholder</li>
-            <li>Real-time feedback and control</li>
-            <li>Customizable firing modes and alerts</li>
-            <li>Energy-efficient standby mode</li>
-        </ul>
-    </section> -->
+    <section>
+        <h2>Implementation</h2>
 
-    <!-- <section id="technical-details">
-        <h2>Technical Details</h2>
-        <p>Place</p>
-        <ul>
-            <li>Microcontroller: Arduino Uno</li>
-            <li>Sensor Range: 5-200 cm</li>
-            <li>Motor Speed: 0-180 degrees in 0.5 seconds</li>
-            <li>Power Supply: 5V DC</li>
-        </ul>
-    </section> -->
+        <p>1) Set up Home Assistant and a local MQTT Broker with Raspberry Pi 4</p>
+        <img src="document/imple1.png" width="600">
+
+        <p>2) Install Related Add ons including ESPHome, MJPG IP Camera and MQTT</p>
+        <img src="document/imple2.png" width="600">
+
+        <p>3) Run a python scripts with desired mode, MQTT or Serial. To a connected webcam</p>
+        <img src="document/imple3.png" width="600">
+
+        <p>4) For MQTT mode, compile and upload ESPHome YAML Config to ESP32</p>
+        <img src="document/imple4.png" width="600">
+
+        <p>5) For Serial mode, upload arduino sketch to ESP32</p>
+        <img src="document/imple5.png" width="600">
+    </section>
+
+    <section>
+        <h2>Demonstration</h2>
+
+        <img src="document/demo1.png" width="600">
+        <p>Face Detecting Frame, Home Assistant UI, Zigbee Light Status and Alternative POV</p>
+
+        <!-- <video width="600" muted autoplay loop>
+            <source src="document/vdodemo1.mp4">
+        </video>
+        <p>Demo Video</p> -->
+
+        <img src="document/demo2.png" width="600">
+        <img src="document/demo3.png" width="600">
+        <p>MQTT Messeges of Zigbee Light Status</p>
+    </section>
+
 </div>
 
 </body>
