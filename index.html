@@ -19,18 +19,17 @@
             padding: 20px;
             text-align: center;
         }
-        /* Color strips below the header */
         .color-strips {
             display: flex;
-            height: 10px; /* 1/4 of the 20px header padding */
+            height: 10px;
         }
         .color-strip-left {
             flex: 1;
-            background-color: #e188fc; /* Blue strip */
+            background-color: #e188fc;
         }
         .color-strip-right {
             flex: 1;
-            background-color: #68b282; /* Green strip */
+            background-color: #68b282;
         }
         nav {
             display: flex;
@@ -57,19 +56,32 @@
         h1, h2 {
             color: #24292e;
         }
+        h4 {
+            color: #ffffff;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block; /* Keeps the background close to the text */
+        }
+
         .hero {
             text-align: center;
             padding: 50px 20px;
-            background-color: #f6f8fa;
+            background-size: cover;
+            background-position: center;
+            color: white;
             border-bottom: 1px solid #e1e4e8;
+            height: 400px; /* Adjust height as needed */
+            background-image: url(document/openhouse/IMG_4799.JPG);
         }
-        .hero h1 {
+        .hero h1, .hero h4 {
             font-size: 42px;
             margin-bottom: 20px;
         }
         .hero p {
             font-size: 20px;
-            color: #586069;
         }
         .cta-button {
             display: inline-block;
@@ -118,10 +130,9 @@
 <body>
 
 <header>
-    <h1>Smart Home Camera</h1>                  <!-- Project Name Here-->
+    <h1>Smart Home Camera</h1>                 
 </header>
 
-<!-- Two color strips below the header -->
 <div class="color-strips">
     <div class="color-strip-left"></div>
     <div class="color-strip-right"></div>
@@ -132,44 +143,66 @@
     <a href="progress.html">Progress Reports</a>
 </nav>
 
-<section class="hero">
+<section class="hero" id="hero">
     <div class="container">
-        <h1>Home Automation Project</h1>
-        <p>SOFTWARE DEV PRACTICE I 010123131</p>
-        <p>KMUTNB Open House 3 - 5 October 2024</p>
+        <div class="overlay">
+            <h4>Home Automation Project</h4>
+            <p>SOFTWARE DEV PRACTICE I 010123131</p>
+            <p>KMUTNB Open House 3 - 5 October 2024</p>
+        
         <a href="https://drive.google.com/drive/u/2/folders/1ToSmoNzJPaYKpcS-VlFx9QymG65Ro3Lu" target="_blank">
             <img src="logos/canva.png" width="50" title="Presentation Slide">
         </a>
         <a href="https://drive.google.com/drive/u/0/folders/1ZlKiGa6MLKdSIDhlUlOv9Gmluk12JkEh" target="_blank">
-            <img src="logos/brochure.png" width="95" title="Brochure">
+            <img src="logos/brochure_w.png" width="50" title="Brochure">
         </a>
         <a href="https://github.com/Phumvit/Smart_Home_Camera" target="_blank">
-            <img src="logos/gihub_logo.png" width="50" title="Github">
+            <img src="logos/github_logo_w.png" width="50" title="Github">
         </a>
-
+        </div>
     </div>
 </section>
+
 
 <section class="container" id="team">
     <h2>Team Members</h2>
     <div class="team">
         <div class="team-member">
-            <!-- <img src="" alt=""> -->
             <h3>Thanathan Chansuk</h3>
             <p>(6601012620101)</p>
         </div>
         <div class="team-member">
-            <!-- <img src="" alt=""> -->
             <h3>Phumvit Wongmool</h3>
             <p>(6601012630068)</p>
         </div>
         <div class="team-member">
-            <!-- <img src="" alt=""> -->
             <h3>Puwit Luedara</h3>
             <p>(6601012610113)</p>
         </div>
     </div>
 </section>
+
+<script>
+    const hero = document.getElementById('hero');
+    const images = [
+        'openhouse/IMG_4799.JPG',
+        'openhouse/IMG_4802.JPG',
+        'openhouse/IMG_4803.JPG',
+        'openhouse/IMG_4804.JPG',
+        'openhouse/IMG_4805.JPG',
+        'openhouse/IMG_4806.JPG',
+        'openhouse/IMG_4807.JPG',
+        'openhouse/IMG_4809.JPG'
+    ];
+    let currentImageIndex = 1;
+
+    function changeBackgroundImage() {
+        hero.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    setInterval(changeBackgroundImage, 5000); // Change every 5 seconds
+</script>
 
 </body>
 </html>
